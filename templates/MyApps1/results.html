@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>DJango-Session App-2</title>
+</head>
+<style>
+    h1,h2{
+        color: green;
+    }
+    body{
+        background-color:lightgoldenrodyellow;
+    }
+</style>
+<body>
+    <h1>DJango-Session App-2(Person-Profile)</h1>
+    <hr/>
+    {% if request.session %}
+        <h2>Thanks for providing information..Plz confirm it??</h2>
+        <ul>
+            {% for key,value in request.session.items %}
+                <li><h4>{{ key|upper }}:::::{{ value|title }}</h4></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Information available with us anymore!!</p>
+        <a href="/name2/">Click-Here to Submit Your Information</a>
+    {% endif %}
+</body>
+</html>

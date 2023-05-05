@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Django-Session App-2</title>
+</head>
+<style>
+    h1,h2{
+        color: blue;
+    }
+    body{
+        background-color: lightgreen;
+    }
+</style>
+<body>
+    <h1>Django-Session App-2(Person-Profile)</h1>
+    <hr/>
+    <h2>Name-Registration-From</h2>
+    <form action="/age">
+        {{ formobj1 }}
+        {% csrf_token %}<br/><br/>
+        <input type="submit" name="" value="Submit-Name">
+    </form>
+</body>
+</html>
